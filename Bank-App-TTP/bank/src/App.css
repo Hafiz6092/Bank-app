@@ -1,0 +1,245 @@
+body {
+  background-color: powderblue;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.ultag {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.litag {
+  margin: 0 10px;
+}
+
+.litag a {
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: ivory;
+}
+
+.litag a:hover {
+  background-color: powderblue;
+  color: ivory;
+}
+
+.home {
+  text-align: center;
+  padding: 20px;
+}
+
+.home h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.home h1::before,
+.home h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3.5px;
+  background-color: ivory;
+  bottom: -2px;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.home h1::before {
+  transform-origin: right;
+}
+
+.home h1::after {
+  transform-origin: left;
+}
+
+.home h1:hover::before {
+  transform: scaleX(0);
+}
+
+.home h1:hover::after {
+  transform: scaleX(0);
+}
+
+.home h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.creditContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px double black;
+  border-radius: 5px;
+}
+
+.debitContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px double black;
+  border-radius: 5px;
+}
+
+.innerContainer {
+  text-align: center;
+}
+.forms {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  text-align: center;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+button {
+  background-color: gray;
+  color: black;
+  border: 1px solid;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: ivory;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgb(6, 6, 6);
+  margin: 10px 0;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: larger;
+}
+
+h1,
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.homeContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.featuresSection {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+.feature {
+  width: 30%;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #777;
+}
+
+.ProfileContainer {
+  background-color: gainsboro;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  flex-basis: 200px;
+  font-weight: bold;
+}
+
+.value {
+  flex-grow: 1;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  /* Set the desired width */
+}
+
+.resized-img {
+  width: 40%; /* Adjust the percentage value to reduce the width */
+  height: auto;
+}
+.backto {
+  display: flex;
+  justify-content: center;
+}
+.bul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.bli {
+  margin: 0 10px;
+}
+
+.bli a {
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: ivory;
+}
+
+.bli a:hover {
+  background-color: powderblue;
+  color: ivory;
+}
