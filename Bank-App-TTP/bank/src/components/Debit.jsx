@@ -2,19 +2,22 @@ import React,{useState, useEffect} from "react";
 import {Link, useNavigate} from "react-router-dom";
 
 function Debit(props) {
+    console.log(props);
 
     const [description, setDescription] = useState(""); // Holds the description entered in the form
     const [amount, setAmount] = useState(""); // Holds the amount entered in the form
     const [submissions, setSubmissions] = useState([]); // Stores the list of form submissions
     const [totalAmount, setTotalAmount] = useState(props.debit); // Keeps track of the total debit amount
-    const [balance, setBalance] = useState(0); // Keeps track of the balance
+    //const [balance, setBalance] = useState(0); // Keeps track of the balance
     useEffect(() =>{
+        console.log(props.debit + "props");
         setTotalAmount(
             props.debit + submissions.reduce((acc, curr)=>{
                 return acc - parseFloat(curr.amount);
             },0)
         )
-        setBalance(totalAmount - props.credit);
+        console.log(totalAmount+"totalAmount");
+        //setBalance(totalAmount - props.debit);
     }, [props.credit, props.debit, submissions, totalAmount]);
 
     function useDeb(event){
@@ -68,7 +71,7 @@ function Debit(props) {
         <button type="submit">Submit</button>
         </div>
       </form>
-      <h3>Remaining Account Balance: ${balance} </h3>
+      <h3>Remaining Account Balance: ${props.balance} </h3>
       <h3>Total Debit: ${totalAmount}</h3>
 
       <div>

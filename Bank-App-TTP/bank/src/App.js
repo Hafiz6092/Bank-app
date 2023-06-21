@@ -13,6 +13,9 @@ function App() {
   const [debitList, setDebitList] = useState(0);
   const[creditList, setCreditList] = useState(0);
 
+  const [balance, setBalance] = useState(0); // Keeps track of the balance
+
+
   const apiCredit = 'https://bank-of-react-b745wfs0u-ajlapid718.vercel.app/credits';
   const apiDebit = 'https://bank-of-react-b745wfs0u-ajlapid718.vercel.app/debits';
 
@@ -40,13 +43,17 @@ function App() {
     }
     fetchDebit();
   },[debitList]);
+  useEffect(() =>{
+    setBalance(creditList - debitList);
+  },[debitList, creditList]);
 
-  function balance(debit, credit){
+
+  function balance1(debit, credit){
     return debit - credit;
   }
-  const bal = balance(debitList, creditList);
-  const creditAmount = creditList;
-  const debitAmount = debitList;
+  //const bal = balance1(debitList, creditList);
+  //const creditAmount = creditList;
+  //const debitAmount = debitList;
 
   return (
     <Router>
@@ -72,9 +79,9 @@ function App() {
         {/**Routes */}
         <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/profile" element={<Profile bal = {bal} />} />
-        <Route path="/credit" element={<Credit credit = {creditAmount} />} />
-        <Route path="/debit" element={<Debit debit = {debitAmount} />} />
+        <Route path="/profile" element={<Profile bal = {balance} />} />
+        <Route path="/credit" element={<Credit credit = {creditList} balance = {balance} />} />
+        <Route path="/debit" element={<Debit debit = {debitList} balance = {balance} />} />
       </Routes>
       </div>
       <footer className="foot">Made by Ghulam Ahmed</footer>
