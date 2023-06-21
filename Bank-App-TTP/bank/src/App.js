@@ -50,6 +50,7 @@ function App() {
 
   return (
     <Router>
+      <h2>This is my Website, for more info Click the Home Button Below</h2>
       <div className="App">
         {/*Navigation */}
         <nav className="navbar">
@@ -76,6 +77,7 @@ function App() {
         <Route path="/debit" element={<Debit debit = {debitAmount} />} />
       </Routes>
       </div>
+      <footer className="foot">Made by Ghulam Ahmed</footer>
     </Router>
     
   );

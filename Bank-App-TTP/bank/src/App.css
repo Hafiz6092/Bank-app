@@ -243,3 +243,9 @@ h2 {
   background-color: powderblue;
   color: ivory;
 }
+.foot {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 15fr;
+  color: black;
+}
