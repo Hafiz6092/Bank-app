@@ -8,7 +8,7 @@ export default function CreditForm(props) {
   const [creditAmount, setCreditAmount] = useState(""); // Holds the credit amount entered in the form
   const [creditSubmissions, setCreditSubmissions] = useState([]); // Stores the list of credit submissions
   const [totalCreditAmount, setTotalCreditAmount] = useState(props.credit); // Keeps track of the total amount of credit
-  const [balance, setBalance] = useState(0); // Keeps track of the balance
+  //const [balance, setBalance] = useState(0); // Keeps track of the balance
 
   // UseEffect to calculate total credit and balance
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function CreditForm(props) {
     const calculatedBalance = props.debit - props.credit - creditSubmissions.reduce((acc, curr) => {
       return acc + parseFloat(curr.amount);
     }, 0);
-    setBalance(calculatedBalance);
+    //setBalance(calculatedBalance);
   }, [props.credit, creditSubmissions, props.debit]); // Dependency array
 
   // Function to handle change in credit description input field
@@ -81,7 +81,7 @@ export default function CreditForm(props) {
         </div>
       </form>
 
-      <h3>Remaining Account Balance: ${balance}</h3>
+      <h3>Remaining Account Balance: ${props.balance}</h3>
       <h3>Total Credit: ${totalCreditAmount}</h3>
 
       <div>
